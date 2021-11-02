@@ -25,17 +25,25 @@
   </head>
 
   <body>
+    <img
+      src="images/autumn-header-low.jpg"
+      class="autumn-header"
+      alt="Autumn forest"
+    />
     <header>
-      <img
-        src="images/autumn-header-low.jpg"
-        class="autumn-header"
-        alt="Autumn forest"
-      />
       <nav class="top-menu">
-        <div class="hamburger-menu">
-          <i class="fas fa-bars"></i>
-          <p>MENU</p>
-        </div>
+        <label for="hamburger-menu"><i class="fas fa-bars"></i>MENU</label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav class="hamburger">
+          <ul>
+            <li><p>MENU</p></li>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">STORE</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">NEWSLETTER</a></li>
+          </ul>
+        </nav>
+
         <i class="fas fa-search"></i>
         <img src="images/RainyDays_A.png" class="logo" alt?="rainy Days Logo" />
         <i class="fas fa-user"></i>
@@ -45,15 +53,15 @@
 
     <main>
       <div class="hero">
-        <a href="#" class="cta">SHOP<i class="fas fa-arrow-right"></i></a>
         <img
           src="images/hero-mob.jpg"
           alt="Two hikers looking over a lake with
     beautiful mountain scenery"
         />
+        <a href="#" class="cta">SHOP<i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="main-content">
-        <p>PUSHING THE COMFORT ZONE</p>
+        <h1>PUSHING THE COMFORT ZONE</h1>
         <img src="images/mountains.png" alt="Mountains illustration" />
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
@@ -79,8 +87,12 @@
     </main>
 
     <footer>
-      <p><i class="fas fa-search"></i>search</p>
+      <span class="search-bar">
+        <input type="text" placeholder="Search" />
+      </span>
+
       <p>Sign up for our <a href="#">Newsletter</a></p>
+
       <!--
           <a href="https://www.freepik.com/vectors/logo"
         >Logo vector created by myriammira - www.freepik.com</a> 
@@ -91,15 +103,20 @@
         <li><a href="#">Lorem Ipsum</a></li>
         <li><a href="#">Lorem Ipsum</a></li>
       </ul>
-      <p>Contact us</p>
-      <p>rainydays@email.com</p>
-      <p>Phone +47 92345678</p>
-      <div>
+
+      <ul>
+        <li><p>Contact us</p></li>
+        <li><p>rainydays@email.com</p></li>
+        <li><p>Phone +47 92345678</p></li>
+      </ul>
+
+      <div class="sns-links">
         <i class="fab fa-facebook"></i>
         <i class="fab fa-instagram"></i>
         <i class="fab fa-twitter"></i>
       </div>
-      <ul>
+
+      <ul class="terms-policy">
         <li><a href="#">Terms and Conditions</a></li>
         <li><a href="#">Cookies</a></li>
         <li><a href="#">Privacy Policy</a></li>
