@@ -4,10 +4,6 @@ body {
   min-width: 200px;
 }
 
-* {
-  border: 1px solid black;
-}
-
 header {
   background-color: white;
   position: sticky;
@@ -21,7 +17,8 @@ main {
 
 h1 {
   font-family: "Bungee", cursive;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  max-width: 100%;
   margin: 0;
 }
 
@@ -52,11 +49,11 @@ a:hover {
   background-color: #d16435;
   color: white;
   text-decoration: none;
-  padding: 10px 40px;
-  top: -620px;
+  padding: 5px 30px;
+  top: -520px;
   border: 1px solid #b1613f;
   font-family: "Dosis", sans-serif;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .cta i {
@@ -79,7 +76,7 @@ a:hover {
 
 .mobile-top-nav ul {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   width: 100%;
   padding: 0px;
   margin: 0;
@@ -214,6 +211,10 @@ footer i {
     max-width: 1600px;
     min-width: 1000px;
     margin: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
   }
 
   .mobile-top-nav,
