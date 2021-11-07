@@ -1,6 +1,11 @@
 body {
   margin: 0;
   background-color: #f8f8ee;
+  min-width: 200px;
+}
+
+* {
+  border: 1px solid #000;
 }
 
 header {
@@ -20,6 +25,11 @@ h1 {
   margin: 0;
 }
 
+li {
+  list-style-type: none;
+  font-family: "Dosis", sans-serif;
+}
+
 p {
   font-family: "Dosis", sans-serif;
   font-size: 1.3rem;
@@ -32,11 +42,6 @@ a {
 
 a:hover {
   color: #b1613f;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
 }
 
 .cta {
@@ -62,8 +67,6 @@ ul {
 .cta:hover {
   background-color: #e24e0e;
   color: white;
-  box-shadow: #363c40
-  transition: #e24e0e;
 }
 
 /* HEADER */
@@ -74,16 +77,19 @@ ul {
   object-fit: cover;
 }
 
-.top-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-  padding: 10px;
+.desktop-top-nav {
+  display: none;
 }
 
-.top-menu i {
-  font-size: 2.5rem;
+.mobile-top-nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0px;
+}
+
+.mobile-top-nav i {
+  font-size: 2rem;
   color: #363c40;
 }
 
@@ -97,31 +103,18 @@ input#hamburger-menu {
 
 input#hamburger-menu:checked ~ nav.hamburger {
   display: block;
-  background-color: aqua;
-}
-
-label[for="hamburger-menu"] {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  font-size: 1rem;
-  font-family: "Dosis", sans-serif;
-}
-
-nav.hamburger ul {
-  list-style-type: none;
-  display: block;
-  padding: 0;
-  margin: 0;
-  width: 120px;
 }
 
 .logo {
-  max-width: 35%;
+  max-width: 30%;
   height: auto;
 }
 
 /* MAIN PAGE */
+
+.desktop-top-nav {
+  display: none;
+}
 
 .hero {
   position: relative;
@@ -150,7 +143,6 @@ p {
 footer {
   background-color: #363c40;
   color: white;
-  padding: 0 0 15px 30px;
   margin-top: 100px;
 }
 
@@ -175,8 +167,8 @@ footer p {
   line-height: 20px;
 }
 
-footer ul {
-  margin: 50px 0;
+footer > p {
+  padding-left: 40px;
 }
 
 footer li a {
@@ -201,15 +193,66 @@ footer i {
 .terms-policy {
   display: flex;
   justify-content: space-evenly;
-  margin: 20px 0 0 -30px;
+  margin: 0;
+  padding: 0;
 }
 
 /* RESPONSIVE TABLET */
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 640px) {
+  .slogan {
+    width: 250px;
+  }
+
+  .cta {
+    display: flex;
+    align-content: center;
+    align-items: baseline;
+    position: relative;
+    background-color: #d16435;
+    color: white;
+    text-decoration: none;
+    padding: 5px 30px;
+    top: -350px;
+    border: 1px solid #b1613f;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.8rem;
+  }
 }
 
 /* RESPONSIVE DESKTOP */
 @media screen and (min-width: 850px) {
+  body {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .mobile-top-nav,
+  .fa-bars {
+    display: none;
+  }
+
+  .desktop-top-nav {
+    display: block;
+  }
+
+  .desktop-top-nav > ul {
+    display: flex;
+    padding-left: 5px;
+    margin: 0;
+  }
+
+  .desktop-top-nav > ul > li {
+    margin-right: 20px;
+    font-size: 1.3rem;
+  }
+
+  .logo {
+    max-width: 15%;
+  }
+
+  .slogan {
+    width: 350px;
+  }
 }
 
 /*

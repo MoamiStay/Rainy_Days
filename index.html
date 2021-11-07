@@ -31,38 +31,62 @@
       alt="Autumn forest"
     />
     <header>
-      <nav class="top-menu">
-        <label for="hamburger-menu"><i class="fas fa-bars"></i>MENU</label>
-        <input type="checkbox" id="hamburger-menu" />
-        <nav class="hamburger">
-          <ul>
-            <li><p>MENU</p></li>
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">STORE</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">NEWSLETTER</a></li>
-          </ul>
-        </nav>
-
+      <nav class="mobile-top-nav">
         <i class="fas fa-search"></i>
         <img src="images/RainyDays_A.png" class="logo" alt?="rainy Days Logo" />
         <i class="fas fa-user"></i>
         <i class="fas fa-shopping-cart"></i>
       </nav>
+
+      <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="hamburger-menu" />
+      <nav class="hamburger">
+        <ul>
+          <li><p>MENU</p></li>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">STORE</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">NEWSLETTER</a></li>
+        </ul>
+      </nav>
+      
+      <nav class="desktop-top-nav">
+        <ul>
+          <li><img
+            src="images/RainyDays_A.png"
+            class="logo"
+            alt?="rainy Days Logo"
+          />
+          <li><a href="#">SHOP</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <input type="text">
+          <li><a href="#"><i class="fas fa-user"></i></a></li>
+          <li></li><a href="#"><i class="fas fa-shopping-cart"></i></i></a></li>
+        </ul>
+      </nav>
+   
     </header>
 
     <main>
       <div class="hero">
-        <img
-          src="images/hero-mob.jpg"
-          alt="Two hikers looking over a lake with
-    beautiful mountain scenery"
-        />
+        <picture>
+          <source srcset="images/Desktop1.jpg" media="(min-width: 640px)" />
+          <img
+            src="images/hero-mob.jpg"
+            alt="Two hikers looking over a lake with
+          beautiful mountain scenery"
+          />
+        </picture>
+
         <a href="#" class="cta">SHOP<i class="fas fa-arrow-right"></i></a>
       </div>
       <div class="main-content">
         <h1>PUSHING THE COMFORT ZONE</h1>
-        <img src="images/mountains.png" alt="Mountains illustration" />
+        <img
+          src="images/mountains.png"
+          class="slogan"
+          alt="Mountains illustration"
+        />
         <p>
           Lorem ipsum dolor sit amet consectetur, adipisicing elit.
           Exercitationem doloribus error, ipsa itaque totam libero. Veritatis id
