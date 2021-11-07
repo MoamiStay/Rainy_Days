@@ -5,7 +5,7 @@ body {
 }
 
 * {
-  border: 1px solid #000;
+  border: 1px solid black;
 }
 
 header {
@@ -77,15 +77,12 @@ a:hover {
   object-fit: cover;
 }
 
-.desktop-top-nav {
-  display: none;
-}
-
-.mobile-top-nav {
+.mobile-top-nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   padding: 0px;
+  margin: 0;
 }
 
 .mobile-top-nav i {
@@ -204,17 +201,9 @@ footer i {
   }
 
   .cta {
-    display: flex;
-    align-content: center;
-    align-items: baseline;
-    position: relative;
-    background-color: #d16435;
-    color: white;
     text-decoration: none;
     padding: 5px 30px;
     top: -350px;
-    border: 1px solid #b1613f;
-    font-family: "Dosis", sans-serif;
     font-size: 1.8rem;
   }
 }
@@ -222,7 +211,8 @@ footer i {
 /* RESPONSIVE DESKTOP */
 @media screen and (min-width: 850px) {
   body {
-    max-width: 1200px;
+    max-width: 1600px;
+    min-width: 1000px;
     margin: auto;
   }
 
@@ -242,12 +232,30 @@ footer i {
   }
 
   .desktop-top-nav > ul > li {
-    margin-right: 20px;
+    margin-right: 50px;
     font-size: 1.3rem;
+  }
+
+  .desktop-top-nav i {
+    font-size: 1.3rem;
+    color: #363c40;
+  }
+
+  .desktop-top-nav ul li:nth-child(4) > input {
+    border-radius: 7px;
+    margin-left: 3px;
+    max-width: 30%;
   }
 
   .logo {
     max-width: 15%;
+  }
+
+  .cta {
+    text-decoration: none;
+    padding: 10px 40px;
+    top: -650px;
+    font-size: 2.4rem;
   }
 
   .slogan {
